@@ -6,22 +6,55 @@
     <title>Document</title>
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/style.css">
+
+    <!--poppins-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ramaraja&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <header>
         <div class="flexHeader"> 
             <h3>Productly</h3>
+            <div class="br"></div>
             <nav>
-                <ul>
+                <ul class="flexHeader__ul">
                     <li><a>Product</a></li>
                     <li><a>Customers</a></li>
                     <li><a>Pricing</a></li>
                     <li><a>Resources</a></li>
                 </ul>
             </nav>
-            <button>hello</button>
+            <button class="flexHeader__button--in">Sign In</button>
+            <button class="flexHeader__button--up">Sign Up</button>
         </div>
     </header>
+
+    
+    <div class="flexIntro1">
+        <div class="flexIntro1__left">
+            <h1>The Design Thinking superpowers</h1>
+            <p class="flexIntro1__left--p">Tools, tutorials, design and innovation experts, all in one place! The most intuitive way to imagine your next user experience.</p>
+            <div class="flexIntro1__left__buttons">
+                <!--
+                not sure if i'm naming the classes correctly
+                naming the buttons flexIntro1__left__buttons--getStarted or something similar seems longer than necessary
+                -->
+
+                <button class="button--getStarted">Get started</button>
+                <button class="button--watchVideo"><div class="triangle"></div> Watch the video</button>
+
+            </div>
+        </div>
+
+        <div class="flexIntro1__right">
+            <img class="jumping" href="images/image.png" alt="picture of people jumping with books in the air">
+            <img class="oval" href="images/Oval.png" alt="picture of an oval">
+
+        </div>
+        
+    </div>
     
 </body>
 </html>
