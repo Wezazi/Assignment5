@@ -1,26 +1,30 @@
 
 
+/* CTRL+F5 cache*/
 
 .flexHeader{
     display:flex;
     
     
-    /* all the element seem to start atleast 145px away from the left and right viewport wall*/
+    /* all the element seem to start atleast 145px away from the left and right viewport wall. */
     margin-left:145px;
     margin-right:145px;
     align-items: center
     
+    /* 
+        How can i make the page look consistent on all monitor/viewport sizes?
+        In figma, the jumping picture is aligned so it's placed besides the <h1> but also under the top right buttons and anchors.
+        My Jumping picture is placed besides the h1 but not under the buttons and anchors. Is it posibble to make my page look like figma even though my viewport is larger
 
+    */
 }
 
 
 ul{
-    /* to remove dots from list items */
-    list-style-type: none;
+    list-style-type: none; /* to remove dots from list items */
     color: #2F281E;
     display:flex;
-    /*i tried using align-items: flex-start + justify-content: space-evenly but nothing happened so i just used gap and guessed the space between each anchor tag and  */
-    gap:20px;
+    gap:20px;  /*i tried using align-items: flex-start + justify-content: space-evenly but nothing happened so i just used gap and guessed the space between each anchor tag and  */
     line-height:28px;
     letter-spacing:0px;
     
@@ -30,10 +34,8 @@ ul{
 
 .flexHeader__button--up{
     /*
-        using justify-content on the flexheader moved all the flex items to the right corner but justify-self on specific items didn't so i had to get creative
+        Using justify-content on the flexheader moved all the flex items to the right corner but justify-self:flex-end; on specific items didn't work so i had to get creative
         By using the artificialy breakline i learned about in the last assignment but without setting wrap
-
-        justify-self:flex-end;
     */
    
     width:110px;
@@ -63,12 +65,13 @@ ul{
     margin-left:145px;
     margin-right:145px;
     display:flex;
+    align-items: center;
+    
 }
 
 .flexIntro1__left{
     width:518px;
     height:331px;
-    
 }
 
 
@@ -76,15 +79,18 @@ ul{
     line-height:28px;
     width:458px;
     height:95;
-    /* couldn't figure out how to match the line break positions*/
- 
+    font-family: "Poppins", sans-serif;
 }
 
 h1{
     width:518px;
     line-height:54px;
     font-family: "Poppins", sans-serif;
-    /* couldn't figure out how to match the line break position here either, superpowers is supposed to start in a new line, nvm setting the font family to poppins bold fixed it*/
+    /* setting the font family to poppins made the header break position match figma*/
+    
+    margin:0px; /*  I noticed that the H1 was a bit missaligned with the guys head so i inspected elements and saw that the H1 wasn't using its full box model, there was some added margin to the top and bottom of the box, but i never added any margin property or values.
+                    I searched it up and turns out that headers have a default margin value applied to them. Is header an exception or is there more elements that have css properties set by default and are they important to be aware of? 
+                */
 }
 
 .flexIntro1__left__buttons{
@@ -125,11 +131,125 @@ come back to this later
 
 */
 
-.flexIntro1__right{
+.images{
+    display:flex;
+    align-items: center;
+}
+
+.jumping{
     width:605px;
     height:496px;
 }
 
-.jumping{
+.oval{
+    width:467px;
+    height:438px;
+    /* 
+        THe oval picture starts besides jumping , if we move oval to the left by 605 px, it will start at the same spot as jumping.
+        In figma, the the oval starts 53px to the right of where jump starts. We can take the width of the jumping picture - 53. which is 552. 
+        To position oval correctly we need to move it to the left by 552px using relative position
 
+        I could also use transform, does it matter if i use transform or position relative or is it just preference?
+        transform:translate(-552px);
+    */
+
+    position:relative;
+    right:552px;
+    z-index:-1; /*Makes picture appear behind the jumping image*/
+
+    /*
+        Absolute positioning makes no sense to me.
+        
+        
+        comment out the relative position, z-index and the right value above. 
+        Then test and observe what happens when you do these:
+
+        1. 
+        position:absolute;
+
+        Notice that it starts at the same position that the jumping picture does. It makes sense assuming that absolute positioning is relative to where the parent starts (.images).
+
+        2.
+        position:absolute; 
+        right:1px;
+
+        Notice that it moved really far away even though we just set the value for the right attribute to 1px
+
+        doesn't make sense to me, i thought the right and left values were relative to where the element is located with only position:absolute; activated.
+    */
+}
+
+
+.features{
+    margin-top:110px;
+    display:flex;
+    /*
+        The feedback from last assignment stated that i didn't need to use the artificial breakline to achive the layout
+        I figured it out, i don't need to use justify-content:center; + the artificialy breakline. 
+        I can use flex-direction: column; which will make the stack on top of each other. Changing flex direction will make justify-content act as align-items and vice versa, so we need to set align-items:center; instead of justify-content:center;
+    */
+    flex-direction: column;
+    align-items:center;
+    height:543px;
+    margin-left:145px;
+    margin-right:145px;
+
+}
+
+.featuresHeader{
+    font-family: "Poppins", sans-serif;
+    width:539px;
+    font-weight: 700;
+    font-style: normal;
+    size:36px;
+    /* coudldn't figure out why it doesn't break on unveil */
+
+}
+
+.featuresCard{
+    margin-top:54px;
+    display:flex;
+    width:1095px;
+    height:204px;
+    justify-content:center;
+}
+
+.cardItem{
+    display:flex;
+    width:240px;
+    height:178px;
+    flex-direction: column;
+    /* i couldn't make space between the header and icon and the space between the header and paragraph more accurate*/
+    
+}
+
+.cardIcon{
+    width:51px;
+    height:50px;
+    
+   
+}
+
+.cardP{
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    line-Height:26px;
+    width:240px;
+
+}
+
+.cardHeader{
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.featureUp{
+    background-color:#FF9900;
+    width:175px;
+    height:53px;
+    margin-top:34px;
+    color:white;
+    border:transparent;
 }
