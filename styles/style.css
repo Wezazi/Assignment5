@@ -20,7 +20,7 @@
 }
 
 
-ul{
+.flexHeader__ul{
     list-style-type: none; /* to remove dots from list items */
     color: #2F281E;
     display:flex;
@@ -118,18 +118,19 @@ h1{
 
 
 
-/*
-come back to this later
+
 
 .triangle {
   height: 17px;
   aspect-ratio: cos(40deg);
   clip-path: polygon(0 0,100% 50%,0 100%);
   background-color:#FF9900;
+  position:relative;
+  top:15px;
   
 }
 
-*/
+
 
 .images{
     display:flex;
@@ -252,4 +253,111 @@ come back to this later
     margin-top:34px;
     color:white;
     border:transparent;
+}
+
+.design{
+    margin-left:145px;
+    margin-right:145px;
+    display:flex;
+    justify-content:center;
+}
+
+.mainP{
+    width:486px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    line-height:26px;
+}
+
+.mainHeader{
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.mainP--bold{
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color:#2F281E;
+}
+
+.product{
+    margin-left:145px;
+    margin-right:145px;
+    display:flex;
+    justify-content:center;
+}
+
+.checkP{
+    width:430px;
+    height:52px;
+    display:flex;
+    align-items:center;
+    gap:30px;
+}
+
+.check{
+    height:35px;
+    width:35px;
+}
+
+.market{
+    display:flex;
+    justify-content:center;
+
+}
+
+footer{
+    margin-top:189px;
+    padding-top:102px;
+    margin-left:145px;
+    margin-right:145px;
+    display:flex;
+
+}
+
+.logo{
+    height:30px;
+    width:30px;
+    
+}
+
+
+.footList{
+    list-style-type: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height:35px;
+    margin-left:129px;
+    justify-content:center;
+}
+
+
+.footButton{
+    background-color:#FF9900;
+    color:white;
+    width:131px;
+    height:39px;
+
+}
+
+.footInput{
+    display:flex;
+    flex-direction: column;
+    margin-left:82px;
+    gap:20px;
+
+}
+
+input{
+    width:325px;
+    height:48;
+
+}
+.footHeader{
+    position:relative;
+    bottom:15px;
 }

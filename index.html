@@ -16,6 +16,7 @@
 <body>
     <header>
         <div class="flexHeader"> 
+            <img class="logo" src="images/logo.png" alt="logo">
             <h3>Productly</h3>
             <div class="br"></div>
             <nav>
@@ -91,6 +92,110 @@
         </div>
         <button class="featureUp">SIGN UP NOW</button>
     </div>
+
+    <main>
+        <div class="design">
+
+            <!--
+                i want to keep block layout for the left section of the flexbox but i need the image to be placed besides the left section so i can't remove position:flex. 
+                I can make a nested div for the left side content which prevents the content within it from becoming flex items, this works because grandchildren of flex don't count as flex items
+            -->
+            <div class="designLeft">
+                <p class="mainP">Effortless Validation for</p>
+                <h2 class="mainHeader">Design Professionals</h2>
+                <p class="mainP">The Myspace page defines the individual, his or her characteristics, traits, personal choices and the overall personality of the person. </p>
+                <p class="mainP--bold">Accessory makers</p>
+                <p class="mainP">While most people enjoy casino gambling, sports betting, lottery and bingo playing for the fun</p>
+                <p class="mainP--bold">Alterationists</p>
+                <p class="mainP">If you are looking for a new way to promote your business that won't cost you more money, </p>
+                <p class="mainP--bold">Custom Design designers</p>
+                <p class="mainP">If you are looking for a new way to promote your business that won't cost you more money,</p>
+
+            </div>
+            <img class="designImage" src="images/design.png" alt="guy in red shirt">
+
+        </div>
+
+        <div class="product">
+
+            <img class="productImage" src="images/product.png" alt="guy in blue shirt">
+
+            <div class="productRight">
+                <p class="mainP">Easier decision making for</p>
+                <h2 class="mainHeader">Product Managers</h2>
+                <p class="mainP">The Myspace page defines the individual, his or her characteristics, traits, personal choices and the overall personality of the person. </p>
+                
+                <!--we need a nested div set to flex for each check + p pair to make the appear besides each other-->
+                
+                <div class="checkP">
+                    <img class="check" src="images/check.png" alt="orange check icon">
+                    <p class="mainP">Never worry about overpaying for your energy again.</p>
+                </div>
+                <div class="checkP">
+                    <img class="check" src="images/check.png" alt="orange check icon">
+                    <p class="mainP">We will only switch you to energy companies that we trust and will treat you right</p>
+                </div>
+                <div class="checkP">
+                    <img class="check" src="images/check.png" alt="orange check icon">
+                    <p class="mainP">We track the markets daily and know where the savings are.</p>
+                </div>
+            
+            </div>
+
+        </div>
+
+        <div class="market">
+
+            <div class="marketLeft">
+                <p class="mainP">Optimisation for</p>
+                <h2 class="mainHeader">Marketers</h2>
+                <p class="mainP">Few would argue that, despite the advancements of feminism over the past three decades, women still face a double standard when it comes to their behavior.  </p>
+                <p class="mainP--bold">Accessory makers</p>
+                <p class="mainP">While most people enjoy casino gambling, sports betting, lottery and bingo playing for the fun</p>
+                <p class="mainP--bold">Alterationists</p>
+                <p class="mainP">If you are looking for a new way to promote your business that won't cost you more money, </p>
+                <p class="mainP--bold">Custom Design designers</p>
+                <p class="mainP">If you are looking for a new way to promote your business that won't cost you more money,</p>
+
+            </div>
+            <img class="designImage" src="images/market.png" alt="guy in red shirt">
+
+        </div>
+    </main>
+
+    <footer>
+        
+            
+        <img class="logo" src="images/logo.png" alt="logo">
+        <h3 class="footHeader">Productly</h3>
+            
+        <nav>
+            <ul class="footList">
+                <li><a>About Us</a></li>
+                <li><a>Blog</a></li>
+                <li><a>Contact</a></li>
+                <li><a>FAQ</a></li>
+            </ul>
+        </nav>
+        
+        <nav>
+            <ul class="footList">
+                <li><a>Disclaimer</a></li>
+                <li><a>Financing</a></li>
+                <li><a>Privacy Policy</a></li>
+                <li><a>Terms of Service</a></li>
+            </ul>
+        </nav>
+
+        <div class="footInput">
+            <input type="text">
+            <button class="footButton">Sign Up Now</button>
+            
+        </div>
+        
+
+
+    </footer>
     
 </body>
 </html>
